@@ -1,4 +1,5 @@
  'use client'
+ 
 import Input from '../components/input/Input';
 import Link from 'next/link';
 import { FormEvent, useState } from 'react';
