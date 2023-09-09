@@ -4,5 +4,7 @@ app=>login=>page.js
 app=>api=>auth=>[...nextauth]=>route.ts
 app=>lib=>prismadb.ts
 app=>api=>register=>route.ts
+root=>app(with command)
 npx prisma init
-prisma (prismasyntax highlighting ext.)
+
+

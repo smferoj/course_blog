@@ -6,13 +6,13 @@ import { FormEvent, useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
-interface initialStateProps{
+interface InitialStateProps{
   name:string,
   email:string,
   password:string
 }
 
-const initialState ={
+const initialState:InitialStateProps ={
   name:'',
   email:'',
   password:''
@@ -36,7 +36,7 @@ export default function page() {
     .then(()=>{
       setTimeout(()=>{
         router.push('/login')
-      },2000)
+      },1000)
     })
     .catch((err:any)=>{
     })
