@@ -1,9 +1,20 @@
 import Image from 'next/image'
+import getCurrentUser from './actions/getCurrentUser'
+import getBlogs from './actions/getBlogs'
 
-export default function Home() {
+export default async function Home() {
+
+  const currentUser = await getCurrentUser()
+  const blogs = await getBlogs()
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello worl
+     {blogs.map((item)=>(
+      <div> 
+        <p> {item.name} </p>
+           <img src={item.imageSrc} alt="image"/>
+      </div>
+
+     ))}
     </main>
   )
 }

@@ -15,15 +15,15 @@ model User{
   emailVerified   DateTime?
   image           String?
   hashedPassword  String?
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
+  createAt       DateTime @default(now())
+  updatedAt      DateTime @updatedAt
   blogs Blog[]
 }
 
 model Blog{
   id String @id @default(auto())@map("_id") @db.ObjectId
   name String
-  createAt DateTime@default(now())
+  createdAt DateTime@default(now())
   imageSrc String
   descriptiom String
   user User @relation(fields: [userId], references: [id], onDelete:Cascade)

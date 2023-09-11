@@ -8,5 +8,11 @@ root=>app(with command)
 npx prisma init
 component=>navbar=>navbar.js
 root=>type=>type.js
+=========create blog===
+app=>create=>page.tsx
+component=>input=>ImageUpload.tsx
+npm i next-cloudinary
+app=>actions=>getBlogs.ts
+root=>page.tsx
 
 
